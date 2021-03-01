@@ -1,0 +1,14 @@
+{
+  "name": "scrapper",
+  "version": "1.0.0",
+  "description": "facebook scrapper to post link at 4am xDD ",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "wassef ben ahmed",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^8.0.0"
+  }
+}
