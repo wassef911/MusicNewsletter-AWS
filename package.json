@@ -2,13 +2,14 @@
   "name": "scrapper",
   "version": "1.0.0",
   "description": "facebook scrapper to post link at 4am xDD ",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node src/index.js"
   },
   "author": "wassef ben ahmed",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "puppeteer": "^8.0.0"
   }
 }
