@@ -9,7 +9,9 @@
   "author": "wassef ben ahmed",
   "license": "MIT",
   "dependencies": {
+    "@sendgrid/mail": "^7.4.2",
     "dotenv": "^8.2.0",
-    "puppeteer": "^8.0.0"
+    "puppeteer": "^8.0.0",
+    "twilio": "^3.58.0"
   }
 }

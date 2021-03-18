@@ -1,17 +1,16 @@
 require('dotenv').config();
-const puppeteer = require("puppeteer");
-const URL = "https://www.facebook.com/groups/718972282074159";
-const POST = "A BOT POSTED THIS!"
+const postingBot = require("./class/postingBot");
 
+(async () => {
+    try {
+        let bot = new postingBot();
+        let post = new repoPost();
+        bot.postToGroup();
+    } catch (err) {
+        console.log(err);
+    }
+})();
 
-async () => {
-    const browser = await puppeteer.launch({
-        headless: false, slowMo: 20, ignoreDefaultArgs: ['--disable-extensions'],
-    });
-    const page = await browser.newPage();
-    await page.goto('https://example.com');
-    await page.screenshot({ path: 'screenshot.png' });
-    await browser.close();
     /*
     
             for (let j = 0; j < sentenceList.length; j++) {
@@ -33,4 +32,3 @@ async () => {
     */
 
 
-};
