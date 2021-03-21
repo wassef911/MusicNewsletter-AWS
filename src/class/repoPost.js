@@ -1,15 +1,21 @@
-const URL = "https://www.facebook.com/groups/718972282074159";
-const POST = "A BOT POSTED THIS!";
+const fs = require('fs');
 
 class repoPost {
 
     constructor() {
-        console.log("bot ready");
+        this.posts = require("../posts.json");
     }
+    getNewPost() {
+        const post = this.posts[0];
+        fs.writeFileSync("./src/posts.json", JSON.stringify(this.posts.slice(1), null, 2));
+        return post;
+    }
+    getPostsLeft() {
+        return this.posts.length;
+    }
+
 }
 
-(() => {
-    console.log("main called");
-})()
+
 
 module.exports = repoPost;
