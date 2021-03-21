@@ -1,34 +1,36 @@
-require('dotenv').config();
-const postingBot = require("./class/postingBot");
-
+const facebookBot = require("./class/facebookBot");
+const repoPost = require("./class/repoPost");
 (async () => {
     try {
-        let bot = new postingBot();
-        let post = new repoPost();
-        bot.postToGroup();
+        /*
+              const posts= new repoPost();
+              console.log(posts.getNewPost()); */
+
+        console.log(process.env.LOGIN_FB);
+        let bot = new facebookBot(process.env.LOGIN_FB, process.env.PASSWORD_FB);
+        await bot.init();
+        await bot.postToGroup(process.env.GROUP_URL, {
+            id: 4,
+            link: "https://github.com/bradtraversy/design-resources-for-developers",
+            author: "bradtraversy",
+            about: "zdadazdazd"
+        })
+
+
     } catch (err) {
         console.log(err);
     }
 })();
 
-    /*
-    
-            for (let j = 0; j < sentenceList.length; j++) {
-                let sentence = sentenceList[j];
-                for (let i = 0; i < sentence.length; i++) {
-                    await page.keyboard.press(sentence[i]);
-                    if (i === sentence.length - 1) {
-                        await page.waitFor(2000);
-                        await page.keyboard.down('Control');
-                        await page.keyboard.press(String.fromCharCode(13)); // character code for enter is 13
-                        await page.keyboard.up('Control');
-                        await page.waitFor(4000);
-    
-                        console.log('done');
-                        await page.click(`[aria-label="What's on your mind?"]`);
-                    }
+/*
+
+
+                    await page.waitFor(4000);
+
+                    await page.click(`[aria-label="What's on your mind?"]`);
                 }
             }
-    */
+        }
+*/
 
 
