@@ -5,7 +5,6 @@ const repoPost = require("./class/repoPost");
         /*
               const posts= new repoPost();
               console.log(posts.getNewPost()); */
-
         console.log(process.env.LOGIN_FB);
         let bot = new facebookBot(process.env.LOGIN_FB, process.env.PASSWORD_FB);
         await bot.init();
@@ -15,8 +14,6 @@ const repoPost = require("./class/repoPost");
             author: "bradtraversy",
             about: "zdadazdazd"
         })
-
-
     } catch (err) {
         console.log(err);
     }
