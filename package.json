@@ -4,7 +4,8 @@
   "description": "facebook scrapper to post link at 4am xDD ",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/env-cmd node src/index.js"
+    "start": "./node_modules/.bin/env-cmd node src/index.js",
+    "fetchYoutube": "./node_modules/.bin/env-cmd node src/youtube/index.js"
   },
   "author": "wassef ben ahmed",
   "license": "MIT",
@@ -12,6 +13,8 @@
     "@sendgrid/mail": "^7.4.2",
     "dotenv": "^8.2.0",
     "env-cmd": "^10.1.0",
+    "google-auth-library": "^7.0.2",
+    "googleapis": "^68.0.0",
     "puppeteer": "^8.0.0",
     "twilio": "^3.58.0"
   }
