@@ -1,0 +1,16 @@
+{
+  "name": "addmail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "zipThis": "zip -r addMail.zip .",
+    "lambdaThat": "aws lambda update-function-code --function-name addMail --zip-file fileb://addMail.zip"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.871.0",
+    "aws-xray-sdk": "^3.2.0"
+  }
+}

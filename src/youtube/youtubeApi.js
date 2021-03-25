@@ -5,7 +5,7 @@ const fetchPlaylistNames = async (link = "https://www.youtube.com/playlist?list=
         const playlistId = link.slice(link.indexOf("=") + 1);
         const service = google.youtube('v3');
         const res = await service.playlistItems.list({
-            key: process.env.YOUTUBE_KEY,
+            key: "AIzaSyAXzVxHwKWO9iluTROtkJwGRKFp95VIXWY",
             part: [
                 "snippet"
             ],
@@ -21,7 +21,7 @@ const fetchVideoId = async (name) => {
     try {
         const service = google.youtube('v3');
         const res = await service.search.list({
-            key: process.env.YOUTUBE_KEY,
+            key: "AIzaSyAXzVxHwKWO9iluTROtkJwGRKFp95VIXWY",
             part: [
                 "snippet"
             ],
@@ -38,7 +38,7 @@ const fetchVideosEmbed = async (idList) => {
     try {
         const service = google.youtube('v3');
         const res = await service.videos.list({
-            key: process.env.YOUTUBE_KEY,
+            key: "AIzaSyAXzVxHwKWO9iluTROtkJwGRKFp95VIXWY",
             part: [
                 "player"
             ],

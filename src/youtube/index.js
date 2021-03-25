@@ -6,7 +6,7 @@ const { AsyncLoop } = require("./utils");
         //const tracks = await fetchPlaylistNames();  commented to avoid exceeding the free quota
         const ids = await AsyncLoop(require("./songslist.json"), fetchVideoId);
         const embeds = fetchVideosEmbed(ids);
-        fs.writeFileSync("./src/videos.json", JSON.stringify(embeds, null, 2));
+        fs.writeFileSync("./videos.json", JSON.stringify(embeds, null, 2));
     } catch (err) {
         console.log(err);
     }
