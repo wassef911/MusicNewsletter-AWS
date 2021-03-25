@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "frontend": "cd frontend && npm run start",
+    "build": "cd frontend && npm run build",
+    "deploy": "cd frontend && npm amplify publish",
     "fetchYoutube": "./node_modules/.bin/env-cmd node src/youtube/index.js"
   },
   "author": "wassef ben ahmed",

@@ -6,7 +6,11 @@ body {
  margin: 0;
  background-color: rgb(26, 26, 26);
 }
-
+h4{
+  user-select: none;
+  font-size: 1.5em;
+  color: white;
+}
 .App{
   display: flex;
   flex-direction: column;
