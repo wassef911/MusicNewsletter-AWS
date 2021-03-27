@@ -9,7 +9,7 @@ exports.handler = async (event) => {
         // get clients and videos from S3 and parse them to json.
         const clientsBuffer = await s3.getObject({
             Bucket: 'music-newsletter2021',
-            Key: 'videos.json'
+            Key: 'mails.json'
         }).promise();
         const clientsString = clientsBuffer.Body.toString();
         const clients = JSON.parse(clientsString);
