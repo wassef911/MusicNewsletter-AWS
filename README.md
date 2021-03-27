@@ -1,4 +1,3 @@
-http://music-newsletter2021-dev.s3-website-us-east-1.amazonaws.com/
 # Music Newsletter - AWS
 ## Powred by SendGrid and the Youtube API
 
